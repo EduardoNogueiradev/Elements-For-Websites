@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.exemplo {
+    position: relative;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 6px solid;
+    width: 80%;
+    margin-left: 10%;
+    height: 190px;
+    border: 10px groove #8e02cf;
+}
+
+.titulo {
+    color:  #8e02cf;
+    height: 63px;
+    width: 50%;
+    margin-left: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 10px;
+}
+
+.elemento1 {
+    position: relative;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 10px;
+}   
+
+
+.container1 {
+    position: relative;
+    font-family: monospace; /*define uma fonte "monospace" para o elemento*/
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    filter: contrast(15);   
+}
+
+.word {
+    color: blanchedalmond;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: switch 8s infinite ease-in-out;
+    margin: auto;
+}
+
+.word:nth-child(1) {
+    animation-delay: -7s;
+}
+.word:nth-child(2) {
+    animation-delay: -6s;
+}
+.word:nth-child(3) {
+    animation-delay: -5s;
+}
+
+@keyframes switch {
+    0%,
+    5%,
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+    50%,
+    80% {
+        filter: blur(180px);
+        opacity: 0;
+    }
+
+}
+
+.elemento2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 {
+    position: relative;
+    height: 100%;
+    perspective: 800px;
+}   
+
+
+.btn {
+    border: none;
+    position: relative;
+    background: none;
+    padding: 30px 80px;
+    display: inline-block;
+    text-transform: uppercase;   /*tipo de texto*/
+    background: #cc0099;
+    color: #fff;
+    letter-spacing: 2px; /* aumenta o espaçamento da letra */
+    font-size: 1rem;
+    font-weight: 800;  /* aumenta a largura do texto */
+    transform-style: preserve-3d;
+    outline: none; /* contorno */
+    outline: 1px solid transparent;
+    transition: all 0.5s ease-out;
+    cursor: pointer;    /* muda o tipo de cursor ao passar por cima */
+}
+
+.btn::after{
+    content: "Button";
+    position: absolute;
+    padding: 30px 80px;
+    z-index: -1;
+    transition: all 0.5s ease-out;
+    width: 146px;
+    height: 23px;
+    left: 0;
+    top: -100%;
+    background: #990073;
+    transform-origin: 0% 100%;
+    transform: rotateX(90deg);
+}
+
+.btn:hover {
+    transform: translateY(40px) rotateX(-90deg) ;
+}
