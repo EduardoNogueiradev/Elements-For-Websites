@@ -42,7 +42,7 @@ html, body {
     border-top: 10px;
 }   
 
-
+/* Slide de Letras */
 .container1 {
     position: relative;
     font-family: monospace; /*define uma fonte "monospace" para o elemento*/
@@ -86,20 +86,19 @@ html, body {
 
 }
 
+
+/* Elemento Botão 3D */
 .elemento2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-
 .container2 {
     position: relative;
     height: 100%;
     perspective: 800px;
 }   
-
-
 .btn {
     border: none;
     position: relative;
@@ -118,7 +117,6 @@ html, body {
     transition: all 0.5s ease-out;
     cursor: pointer;    /* muda o tipo de cursor ao passar por cima */
 }
-
 .btn::after{
     content: "Button";
     position: absolute;
@@ -133,13 +131,12 @@ html, body {
     transform-origin: 0% 100%;
     transform: rotateX(90deg);
 }
-
 .btn:hover {
     transform: translateY(40px) rotateX(-90deg) ;
 }
 
 
-
+/* Elemento de Login */
 #ativar {
     display: block;
     margin: 20px auto;
@@ -149,9 +146,6 @@ html, body {
     background-color: yellow;
     border-radius: 5px;
   }
-  
-  
-  
   #modal h1{
     font-family: sans-serif;
     margin: 0px 0px 20px;
@@ -180,7 +174,6 @@ html, body {
     background: yellow;
     border-radius: 5px;
   }
-  
   #modal {
     padding: 30px;
     background: white;
@@ -193,7 +186,6 @@ html, body {
   }
   #modal.animar {
   animation: slide .5s 1 forwards ;
-  
   }
   
   @keyframes slide {
@@ -201,4 +193,23 @@ html, body {
      opacity: 1;
      transform: translateX(20px);
    }
+  }
+
+
+  /* Elemento LOAD */
+  .load {
+    margin: 60px auto;
+    height: 60px;
+    width: 60px;
+    border: 15px solid;
+    color: yellow;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: anim .6s linear infinite;
+  }
+  
+  @keyframes anim {
+    to {
+      transform: rotate(360deg);
+    }
   }
