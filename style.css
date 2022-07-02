@@ -213,3 +213,70 @@ html, body {
       transform: rotate(360deg);
     }
   }
+
+
+  /* Elemento Share */
+  .wrapper {
+    margin-top: 100px;
+    margin-left: 50% ;
+  }
+  
+  
+  .btn-1{
+    width: 50px;
+    height: 50px;
+    border: none;
+    z-index: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #share{
+  position: absolute;
+  
+  }
+  #share:hover{
+    outline: 6px solid #bb93fc;
+  }
+  #linkedin{
+  position: absolute;
+  }
+  #linkedin:hover{
+   background-color:  #0e76a8;
+  }
+  #insta{
+  position: absolute;
+  }
+  #insta:hover{
+   background-image: url(https://i.pinimg.com/736x/48/4c/1f/484c1f1ebc0a194c30930bcdabddca13.jpg);
+   background-size: 100px;
+   background-repeat: no-repeat;
+  }
+  #github{
+  position: absolute;
+  }
+  #github:hover{
+  background-color: #bdc3c7;
+  }
+  .c-insta {
+    animation: c-insta 0.5s forwards
+  }
+  .c-github {
+    animation: c-github 1s forwards
+  }
+  .c-linkedin {
+    animation: c-linkedin 1.55s forwards
+  }
+  
+  @keyframes c-insta {
+    to { transform: translateX(65px);
+    }
+  }
+  @keyframes c-github {
+    to { transform: translateY(-65px);
+  }
+  }
+  @keyframes c-linkedin {
+    to { transform: translateX(-65px);
+  }
+}
