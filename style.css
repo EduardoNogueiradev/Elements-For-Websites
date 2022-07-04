@@ -317,9 +317,11 @@ html, body {
 
 #titulo {
   color: #d35400;
+  
 }
 .cont {
   margin-bottom: 7px;
+  border-radius: 4px;
 }
 
 .init-hidden{
@@ -352,6 +354,7 @@ html, body {
 }
 .mov {
 animation: mov 1.5s linear forwards;
+
 }
 .no-mov-t{
   opacity: 0;
