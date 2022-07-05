@@ -1,3 +1,14 @@
+/* início dropdown elementos */
+navel.addEventListener('click', () =>{
+  contel.classList.toggle("conteiner-nav");
+  navel.classList.toggle("btn-nav-on");
+  btnel1.classList.toggle("btn-nav-el-on");
+  btnel2.classList.toggle("btn-nav-el-on");
+  btnel3.classList.toggle("btn-nav-el-on");
+  btnel4.classList.toggle("btn-nav-el-on");
+})
+/* fim dropdow elementos */
+
 
 /* Login */
 ativar.addEventListener('click', () =>{
@@ -18,13 +29,13 @@ share.addEventListener('click', () =>{
     console.log(entries)
   
     Array.from(entries).forEach(entry => {
-      if (entry.intersectionRatio >= 1) {
+      if (entry.intersectionRatio >= 0.5) {
       entry.target.classList.add('init-hidden-off')
       }
     })
    
   }, {
-   threshold: 1
+   threshold: [0.25 , 0.5 , 0.75 , 1]
   })
   Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
   observer.observe(element)

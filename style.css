@@ -5,141 +5,244 @@ html, body {
     margin: 0;
     padding: 0;
     height: 2000px;
-    width: 100%;
+    width: 100%;   
 }
 
-.exemplo {
-    position: relative;
-    background-color: black;
-    margin-top: 20px;
-    border-radius: 6px solid;
-    width: 80%;
-    margin-left: 10%;
-    height: 190px;
-    border: 10px groove #8e02cf;
+section {
+  padding: 50px 200px;
 }
 
-.titulo {
-    color:  #8e02cf;
-    height: 63px;
-    width: 50%;
-    margin-left: 25%;
+h2 {
+  font-size: 32px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1px;
+}
+p {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  height: 100px
+}
+
+.alinhar {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* final estrutura site */
+
+/* início menu */
+
+#menu {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: 0px 5px 5px rgb(194, 194, 194);
+  padding: 10px 120px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+
+}
+
+#nav {
+  position: relative;
+  margin-left: 180px;
+}
+
+.btn-nav {
+  margin-left: 30px;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #fff;
+  font-family: Helvetica;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px ;
+}
+
+.btn-nav:hover {
+  background-color: #f1c40f;
+  color: black;
+}
+
+/* final do menu */
+
+/* dropbutton elementos */
+
+#navel {
+  position: relative;
+}
+
+.btn-nav-on{
+  background-color: #f1c40f;
+}
+
+#contel {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 110px;
+  opacity: 0;
+}
+
+.conteiner-nav{
+  animation: cont-nav .2s linear forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-nav-el-on:hover {
+  background: #d35400;
+}
+.btn-nav-el-on {
+  background-color: #f1c40f;
+  border: none;
+  animation: el-on .5s forwards;
+}
+@keyframes el-on {
+  to {
+  padding: 15px;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-family: Helvetica;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  }
+}
+
+@keyframes cont-nav {
+  0% {
+    opacity: 1;
+    background-color: #f1c40f;
+    width: 125px;
+    height: 10px;
+    padding: 20px;
+  }
+  25% {
+    opacity: 1;
+    height: 50px;
+    width: 125px;
+    background-color: #f1c40f;
+    padding: 20px;
+  }
+  50% {
+    opacity: 1;
+    height: 100px;
+    width: 125px;
+    background-color: #f1c40f;
+    padding: 20px;
+  }
+  75%{
+    opacity: 1;
+    height: 175px;
+    width: 125px;
+    background-color: #f1c40f;
+    padding: 20px;
+  }
+  100%{
+    opacity: 1;
+    height: 250px;
+    width: 125px;
+    background-color: #f1c40f;
+    border-radius: 4px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border-top: 10px;
+    padding: 20px;
+  }
 }
 
-.elemento1 {
-    position: relative;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-top: 10px;
-}   
+/* início contato animado */
 
-/* Slide de Letras */
-.container1 {
-    position: relative;
-    font-family: monospace; /*define uma fonte "monospace" para o elemento*/
-    color: rgb(255, 255, 255);
-    font-size: 2em;
-    filter: contrast(15);   
+.wrapper {
+display: block;
+margin-left: 100px;
+margin-bottom: 40px;
 }
 
-.word {
-    color: blanchedalmond;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: switch 8s infinite ease-in-out;
-    margin: auto;
+.btn-1{
+  width: 40px;
+  height: 40px;
+  border: none;
+  z-index: 10px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.word:nth-child(1) {
-    animation-delay: -7s;
+#share{
+background-color: #fff;
+position: absolute;
+padding-right: 10px;
+padding-top: 5.5px;
 }
-.word:nth-child(2) {
-    animation-delay: -6s;
+#share:hover{
+  outline: 2px solid black;
+  background-color: #f1c40f;
 }
-.word:nth-child(3) {
-    animation-delay: -5s;
+#linkedin{
+position: absolute;
 }
-
-@keyframes switch {
-    0%,
-    5%,
-    100% {
-        filter: blur(0px);
-        opacity: 1;
-    }
-
-    50%,
-    80% {
-        filter: blur(180px);
-        opacity: 0;
-    }
+#linkedin:hover{
+ background-color:  #0e76a8;
+}
+#insta{
+position: absolute;
+padding-right: 6.016px;
+padding-top: 5px;
 
 }
+#insta:hover{
+ background-image: url(https://i.pinimg.com/736x/48/4c/1f/484c1f1ebc0a194c30930bcdabddca13.jpg);
+ background-size: 100px;
+ background-repeat: no-repeat;
+}
+#github{
+position: absolute;
+}
+#github:hover{
+background-color: #bdc3c7;
+}
+.c-insta {
+  animation: c-insta 0.5s forwards
+}
+.c-github {
+  animation: c-github 1s forwards
+}
+.c-linkedin {
+  animation: c-linkedin 1.55s forwards
+}
 
+@keyframes c-insta {
+  to { transform: translateY(55px);
+  }
+}
+@keyframes c-github {
+  to { transform: translateY(110px);
+}
+}
+@keyframes c-linkedin {
+  to { transform: translateY(165px);
+}
+}
 
-/* Elemento Botão 3D */
-.elemento2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.container2 {
-    position: relative;
-    height: 100%;
-    perspective: 800px;
-}   
-.btn {
-    border: none;
-    position: relative;
-    background: none;
-    padding: 30px 80px;
-    display: inline-block;
-    text-transform: uppercase;   /*tipo de texto*/
-    background: #cc0099;
-    color: #fff;
-    letter-spacing: 2px; /* aumenta o espaçamento da letra */
-    font-size: 1rem;
-    font-weight: 800;  /* aumenta a largura do texto */
-    transform-style: preserve-3d;
-    outline: none; /* contorno */
-    outline: 1px solid transparent;
-    transition: all 0.5s ease-out;
-    cursor: pointer;    /* muda o tipo de cursor ao passar por cima */
-}
-.btn::after{
-    content: "Button";
-    position: absolute;
-    padding: 30px 80px;
-    z-index: -1;
-    transition: all 0.5s ease-out;
-    width: 146px;
-    height: 23px;
-    left: 0;
-    top: -100%;
-    background: #990073;
-    transform-origin: 0% 100%;
-    transform: rotateX(90deg);
-}
-.btn:hover {
-    transform: translateY(40px) rotateX(-90deg) ;
-}
+/* final contato animado */
 
 
 /* Elemento de Login */
 #ativar {
     display: block;
-    margin: 20px auto;
+    margin: 20px;
     margin-top: 50px;
     font-size: 20px;
     width: 100px;
@@ -156,133 +259,69 @@ html, body {
     margin-bottom: 5px;
     margin-top: 10px;
   }
-  #modal input{
-    font-family: sans-serif;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: .5rem;
-    font-size: 1rem;
-    background: #f7f7f7;
-  }
-  #modal button{
-    margin-top: 20px;
-    font-family: sans-serif;
-    font-size: 1rem;
-    padding: .6rem 2rem;
-    border: none;
-    background: yellow;
-    border-radius: 5px;
-  }
-  #modal {
-    padding: 30px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0,0,0,.2);
-    max-width: 400px;
-    margin: 20px auto;
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  #modal.animar {
+#modal input{
+  width: 100%;
+  padding: .5rem;
+  background: #f7f7f7;
+  font-family: sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+#modal button{
+  margin-top: 20px;
+  background: yellow;
+  padding: .6rem 2rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+
+#modal {
+  background: #ecf0f1;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.2);
+  max-width: 400px;
+  margin: 20px;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+#modal.animar {
   animation: slide .5s 1 forwards ;
-  }
+}
   
-  @keyframes slide {
-   to {
-     opacity: 1;
-     transform: translateX(20px);
-   }
-  }
-
-
-  /* Elemento LOAD */
-  .load {
-    margin: 60px auto;
-    height: 60px;
-    width: 60px;
-    border: 15px solid;
-    color: yellow;
-    border-radius: 50%;
-    border-top-color: transparent;
-    animation: anim .6s linear infinite;
-  }
-  
-  @keyframes anim {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-
-  /* Elemento Share */
-  .wrapper {
-    display: block;
-    margin-top: 100px;
-    margin-left: 50% ;
-  }
-  
-  .btn-1{
-    width: 50px;
-    height: 50px;
-    border: none;
-    z-index: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  #share{
-  position: absolute;
-  
-  }
-  #share:hover{
-    outline: 6px solid #bb93fc;
-  }
-  #linkedin{
-  position: absolute;
-  }
-  #linkedin:hover{
-   background-color:  #0e76a8;
-  }
-  #insta{
-  position: absolute;
-  }
-  #insta:hover{
-   background-image: url(https://i.pinimg.com/736x/48/4c/1f/484c1f1ebc0a194c30930bcdabddca13.jpg);
-   background-size: 100px;
-   background-repeat: no-repeat;
-  }
-  #github{
-  position: absolute;
-  }
-  #github:hover{
-  background-color: #bdc3c7;
-  }
-  .c-insta {
-    animation: c-insta 0.5s forwards
-  }
-  .c-github {
-    animation: c-github 1s forwards
-  }
-  .c-linkedin {
-    animation: c-linkedin 1.55s forwards
-  }
-  
-  @keyframes c-insta {
-    to { transform: translateX(65px);
-    }
-  }
-  @keyframes c-github {
-    to { transform: translateY(-65px);
-  }
-  }
-  @keyframes c-linkedin {
-    to { transform: translateX(-65px);
+@keyframes slide {
+  to {
+   opacity: 1;
+   transform: translateX(20px);
   }
 }
+
+
+/* Elemento LOAD */
+.load {
+  margin: 60px auto;
+  height: 60px;
+  width: 60px;
+  border: 15px solid;
+  color: yellow;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: anim .6s linear infinite;
+}
+  
+@keyframes anim {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* início cards */
+
 #cards {
-  margin-top: 200px;
-  position: relative;
   width: 100%;
   height: 460px;
   display: flex;
@@ -292,7 +331,6 @@ html, body {
 }
 
 #card {
-  position: relative;
   height: 370px;
   width: 250px;
   margin-top: 80px;
