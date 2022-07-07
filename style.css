@@ -441,5 +441,101 @@ animation: mov 1.5s linear forwards;
     transform: translateY(0);
   }
 }
+
+/* inicio waves */
+#box-major {
+  height: 600px;
+  width: 100%;
+  margin-top: 50px ;
+}
+
+#content-wave {
+  position: absolute;
+  height: 600px;
+  width: 750px;
+  margin-left: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+#content-wave:hover {
+  transition: 1s;
+  background-color: rgb(0, 0, 0);
+  color: bisque;
+}
+
+#titulo-wave {
+  font-size: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 60px;
+}
+
+#dpn-wave {
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#box2-wave {
+  position: absolute;
+  height: 603px;
+  width: 440px;
+  margin-left: 1080px;
+  background-color: white;
+  
+}
+#box1-wave {
+  position: absolute;
+  height: 603px;
+  width: 330px;
+  background-color: white;
+
+}
+
+.wave {
+  position: absolute;
+  margin-top: 327px;
+  margin-left: 110px ;
+}
+
+#wave-1 {
+  margin-left: 220px;
+  animation: wave-1 6s linear infinite;
+}
+#wave-2 {
+  animation: wave-2 6s linear infinite;
+
+}
+#wave-3 {
+  margin-left:  330px;
+  animation: wave-3 6s linear infinite;
+}
+
+
+@keyframes wave-1 {
+  25% {
+      transform: translateX(110px);
+  }
+  75%{
+      transform: translateX(-110px);
+  }
+}
+@keyframes wave-3 {
+  50% {
+      transform: translateX(-220px);
+  }
+  100% {
+      transform: translateX(0px);
+  }
+}
+@keyframes wave-2 {
+  50% {
+      transform: translateX(220px);
+  }
+  100%{
+      transform: translateX(0px);
+  }
+}
+/* fim waves */
  
 
